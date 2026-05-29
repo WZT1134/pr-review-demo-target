@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: pr-review-demo-target
+
+server:
+  port: 8081
