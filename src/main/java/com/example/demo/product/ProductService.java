@@ -12,7 +12,10 @@ public class ProductService {
             new Product(3L, "Monitor", new BigDecimal("249.00"), false)
     );
 
-    public List<Product> findAll() {
+    public List<Product> findAll(boolean activeOnly) {
+        if (!activeOnly) {
+            return products;
+        }
         return products.stream()
                 .filter(Product::active)
                 .toList();
